@@ -1,10 +1,13 @@
 {
-    "name": "module-example",
-    "description": "A repo you can copy when creating your own modules",
-    "tags": ["wip", "untested"],
-    "repo": "https://github.com/cfengine/module-example",
-    "by": "https://github.com/sarakthon",
-    "dependencies": ["autorun"],
-    "version": "0.0.1",
-    "steps": ["copy ./example.cf services/autorun/example.cf"]
+  "name": "CFEngine Build module template repo",
+  "type": "module",
+  "description": "This repo only provides 1 module, and is a good starting point for making your own modules",
+  "provides": {
+    "my-module": {
+      "description": "This module has a policy file which reports a string to the terminal, and to the inventory system",
+      "tags": ["inventory"],
+      "dependencies": ["autorun"],
+      "steps": ["copy ./my_policy.cf services/autorun/my_policy.cf"]
+    }
+  }
 }

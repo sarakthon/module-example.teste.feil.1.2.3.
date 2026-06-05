@@ -1,12 +1,11 @@
-promise agent json
-# @brief Define json promise type
+bundle agent hello_inventory
 {
-  path => "$(sys.workdir)/modules/promises/json_promise_type.py";
-  interpreter => "/usr/bin/python3";
-}
-
-bundle agent main
-{
-  json:
-    "/tmp/myusers.json:name" string => "John";
+  meta:
+    "tags" slist => { "autorun" };
+  vars:
+    "hello"
+      string => "Hello from CFEngine Build",
+      meta => { "inventory", "attribute_name=Hello"};
+  reports:
+    "Hello from CFEngine Build";
 }
