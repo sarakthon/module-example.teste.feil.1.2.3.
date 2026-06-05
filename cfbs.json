@@ -3,7 +3,7 @@
   "type": "module",
   "description": "This repo only provides 1 module, and is a good starting point for making your own modules",
   "provides": {
-    "my-module": {
+    "my.module.12.3": {
       "description": "This module has a policy file which reports a string to the terminal, and to the inventory system",
       "tags": ["inventory"],
       "dependencies": ["autorun"],
