@@ -1,0 +1,15 @@
+bundle agent example
+{
+  meta:
+    "tags"
+      slist => { "autorun" };
+
+  reports:
+    "Hello, world!";
+}
+
+bundle agent __main__
+{
+  methods:
+    "example";
+}

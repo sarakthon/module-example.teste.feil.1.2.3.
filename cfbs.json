@@ -1,0 +1,10 @@
+{
+    "name": "module-example",
+    "description": "A repo you can copy when creating your own modules",
+    "tags": ["wip", "untested"],
+    "repo": "https://github.com/cfengine/module-example",
+    "by": "https://github.com/olehermanse",
+    "dependencies": ["autorun"],
+    "version": "0.0.1",
+    "steps": ["copy ./example.cf services/autorun/example.cf"]
+}
