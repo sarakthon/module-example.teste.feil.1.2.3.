@@ -1,15 +1,12 @@
-bundle agent example
+promise agent json
+# @brief Define json promise type
 {
-  meta:
-    "tags"
-      slist => { "autorun" };
-
-  reports:
-    "Hello, world!";
+  path => "$(sys.workdir)/modules/promises/json_promise_type.py";
+  interpreter => "/usr/bin/python3";
 }
 
-bundle agent __main__
+bundle agent main
 {
-  methods:
-    "example";
+  json:
+    "/tmp/myusers.json:name" string => "John";
 }
